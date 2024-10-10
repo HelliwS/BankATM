@@ -1,0 +1,15 @@
+<p>account works!</p>
+
+<button (click)="backPage()">Back to front page</button>
+
+<h1>Card is Entered</h1>
+<h2>PIN:</h2> <form [formGroup]="form" ngSubmit="submitPin()">
+    <input 
+    id="PIN" 
+    type="number" 
+    [(ngModel)]="PIN" 
+    formControlName="PIN"
+    [ngClass]="{'invalid-input': inputInvalid, 'shake': inputInvalid}"
+    (input)="onInput($event)">
+    <button type="submit">Enter </button>
+</form>

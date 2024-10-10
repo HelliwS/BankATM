@@ -1,0 +1,20 @@
+<p>landing-page works!</p>
+
+<h2>Please enter your card</h2>
+<button (click)="cardEntered()">Enter Card</button>
+
+<p *ngIf="cardIsEntered">Card Entered. Loading..</p>
+
+<h2>Sign Up</h2>
+<form [formGroup]="formData" (ngSubmit)="onSubmitSignUp()">
+
+
+    <label for="name">Name: </label>
+    <input id="name" formControlName="name"> 
+  
+    <label for="email">Email: </label>
+    <input id="email" formControlName="email" > 
+  
+    <button type="submit">Submit </button>
+    
+  </form>
