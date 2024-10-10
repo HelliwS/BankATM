@@ -43,6 +43,14 @@ constructor(
 
     if(inputElement.value.length > 4){
       inputElement.value = inputElement.value.slice(0, 4);
+      this.inputInvalid = true;
+
+      setTimeout(() => {
+        this.inputInvalid = false;
+      }, 500);
+      
+    } else {
+      this.inputInvalid = false;
     }
   }
 
