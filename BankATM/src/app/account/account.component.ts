@@ -49,11 +49,9 @@ constructor(
       setTimeout(() => {
         this.inputInvalid = false;
       }, 500);
-      
+
     } else {
       this.inputInvalid = false;
     }
   }
-
-
 }
