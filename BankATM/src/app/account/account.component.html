@@ -6,7 +6,7 @@
 <h2>PIN:</h2> <form [formGroup]="form" ngSubmit="submitPin()">
     <input 
     id="PIN" 
-    type="number" 
+    type="numeric" 
     [(ngModel)]="PIN" 
     formControlName="PIN"
     [ngClass]="{'invalid-input': inputInvalid, 'shake': inputInvalid}"

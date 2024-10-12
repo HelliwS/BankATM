@@ -21,7 +21,7 @@ constructor(
   private pinValidator: FormBuilder
 ) {
   this.form = this.pinValidator.group({
-    PIN: ['', [Validators.required, Validators.maxLength(4)]]
+    PIN: ['', [Validators.required, Validators.maxLength(4), Validators.pattern(/^[0-9]*$/)]]
   });
 
 }
@@ -41,8 +41,9 @@ constructor(
   onInput(event: Event) {
     const inputElement = event.target as HTMLInputElement;
 
-    if(inputElement.value.length > 4){
+    if(inputElement.value.length > 4 || /[^0-9]/.test(inputElement.value)){
       inputElement.value = inputElement.value.slice(0, 4);
+      inputElement.value = inputElement.value.replace(/[^0-9]/g, '');
       this.inputInvalid = true;
 
       setTimeout(() => {
