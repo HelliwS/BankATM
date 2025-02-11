@@ -6,4 +6,6 @@
 <p *ngIf="cardIsEntered">Card Entered. Loading..</p>
 
 <h2>Sign Up</h2>
-<button (click)="signUpBtn()">Enter Card</button>
+<button (click)="signUpBtn()">Sign Up</button>
+<li><a routerLink="/SignUp" routerLinkActive="active" ariaCurrentWhenActive="page">Sign Up</a></li>
+<router-outlet/>
