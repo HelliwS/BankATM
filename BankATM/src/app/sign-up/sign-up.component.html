@@ -1,0 +1,17 @@
+<p>sign-up works!</p>
+
+<button (click)="backPage()">Back to front page</button>
+
+
+<form [formGroup]="formData" (ngSubmit)="onSubmitSignUp()">
+
+
+    <label for="name">Name: </label>
+    <input id="name" formControlName="name"> 
+  
+    <label for="email">Email: </label>
+    <input id="email" formControlName="email" > 
+  
+    <button type="submit">Submit </button>
+    
+  </form>

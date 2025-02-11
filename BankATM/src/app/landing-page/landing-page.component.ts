@@ -27,9 +27,13 @@ export class LandingPageComponent {
     console.log(this.formData.value);
   }
 
-  cardEntered() {
+  cardEnteredBtn() {
     this.cardIsEntered = true;
     this.router.navigate(['/Account'])
+  }
+
+  signUpBtn() {
+    this.router.navigate(['/SignUp'])
   }
 
 
