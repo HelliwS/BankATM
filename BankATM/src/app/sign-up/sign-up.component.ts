@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,6 +23,10 @@ export class SignUpComponent {
 
     backPage() {
       this.router.navigate(['']);
+    }
+
+    onSubmitSignUp() {
+      return;
     }
   
 }
