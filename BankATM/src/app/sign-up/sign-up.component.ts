@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, MatCardModule ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
