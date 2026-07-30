@@ -1,16 +1,20 @@
 
+<div class="text-center">
+    <div class="row m-5">
+            <h1>BANK OF STEVEN</h1>
+            <h2>Please enter your card</h2>
+            <button class="w-50 btn btn-primary d-block mx-auto" (click)="cardEnteredBtn()">Enter Card</button>
 
-<div class="row m-5">
-    <h1>BANK OF STEVEN</h1>
-
-    <h2>Please enter your card</h2>
-    <button class="w-50" (click)="cardEnteredBtn()">Enter Card</button>
-    @if(cardIsEntered){
-        <p>Card Entered. Loading..</p>
-    }
-    
-</div>
-<div class="row m-5">
-    <h2>Sign Up</h2>
-    <button routerLink="/SignUp" routerLinkActive="active" ariaCurrentWhenActive="page">Sign Up</button>
+            @if(cardIsEntered){
+                <p>Card Entered. Loading..</p>
+            }
+    </div>
+    <div class="row m-5">
+        <h2>Sign Up</h2>
+            <button class="w-50 btn btn-primary d-block mx-auto"
+                routerLink="/SignUp"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+            >Sign Up</button>
+    </div>
 </div>
